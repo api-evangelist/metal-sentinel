@@ -1,0 +1,16 @@
+generated: '2026-10-24'
+method: searched
+source: https://metal-sentinel.com/pricing
+name: Metal Sentinel pricing
+audience: developer-api
+pricing_basis: flat-platform
+published: true
+plan_count: 1
+plans:
+  - name: Free
+    price_text: $0/mo
+    price: 0
+    currency: USD
+    billing_period: month
+    description: Free tier with real-time quotes for ten metals, historical price data and mining stock quotes.
+    limits: []

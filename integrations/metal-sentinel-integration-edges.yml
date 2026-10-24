@@ -1,0 +1,16 @@
+generated: '2026-10-24'
+method: none
+source:
+- https://zapier.com/apps/metal-sentinel/integrations
+- https://n8n.io/integrations/metal-sentinel/
+- https://composio.dev/toolkits/metal-sentinel
+- https://monid.ai/tools/metal-sentinel
+checked:
+- https://composio.dev/toolkits/metal-sentinel
+- https://monid.ai/tools/metal-sentinel
+- https://n8n.io/integrations/metal-sentinel/
+- https://zapier.com/apps/metal-sentinel/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

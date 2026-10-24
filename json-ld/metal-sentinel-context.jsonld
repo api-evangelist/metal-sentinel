@@ -1,0 +1,192 @@
+{
+  "@context": {
+    "@vocab": "https://metal-sentinel.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "metal": "https://metal-sentinel.com/schema#",
+    "QuoteResult": "metal:QuoteResult",
+    "symbol": {
+      "@id": "metal:symbol",
+      "@type": "xsd:string"
+    },
+    "currency": {
+      "@id": "metal:currency",
+      "@type": "xsd:string"
+    },
+    "ask": {
+      "@id": "metal:ask",
+      "@type": "xsd:decimal"
+    },
+    "mid": {
+      "@id": "metal:mid",
+      "@type": "xsd:decimal"
+    },
+    "bid": {
+      "@id": "metal:bid",
+      "@type": "xsd:decimal"
+    },
+    "high": {
+      "@id": "metal:high",
+      "@type": "xsd:decimal"
+    },
+    "low": {
+      "@id": "metal:low",
+      "@type": "xsd:decimal"
+    },
+    "open": {
+      "@id": "metal:open",
+      "@type": "xsd:decimal"
+    },
+    "close": {
+      "@id": "metal:close",
+      "@type": "xsd:decimal"
+    },
+    "timestamp": {
+      "@id": "metal:timestamp",
+      "@type": "xsd:integer"
+    },
+    "change": {
+      "@id": "metal:change",
+      "@type": "xsd:decimal"
+    },
+    "changePercentage": {
+      "@id": "metal:changePercentage",
+      "@type": "xsd:decimal"
+    },
+    "unit": {
+      "@id": "metal:unit",
+      "@type": "xsd:string"
+    },
+    "originalTime": {
+      "@id": "metal:originalTime",
+      "@type": "xsd:string"
+    },
+    "extra": {
+      "@id": "metal:extra"
+    },
+    "QuoteResponse": "metal:QuoteResponse",
+    "ID": {
+      "@id": "metal:ID",
+      "@type": "xsd:integer"
+    },
+    "results": {
+      "@id": "metal:results",
+      "@container": "@list"
+    },
+    "GoldQuoteResponse": "metal:GoldQuoteResponse",
+    "SilverQuoteResponse": "metal:SilverQuoteResponse",
+    "HistoryResponse": "metal:HistoryResponse",
+    "name": {
+      "@id": "metal:name",
+      "@type": "xsd:string"
+    },
+    "HistoricalPointsResponse": "metal:HistoricalPointsResponse",
+    "now": {
+      "@id": "metal:now",
+      "@type": "@id"
+    },
+    "thirtyDay": {
+      "@id": "metal:thirtyDay",
+      "@type": "@id"
+    },
+    "sixtyDay": {
+      "@id": "metal:sixtyDay",
+      "@type": "@id"
+    },
+    "oneYear": {
+      "@id": "metal:oneYear",
+      "@type": "@id"
+    },
+    "fiveYear": {
+      "@id": "metal:fiveYear",
+      "@type": "@id"
+    },
+    "ForexQuoteResponse": "metal:ForexQuoteResponse",
+    "MarketStatus": "metal:MarketStatus",
+    "status": {
+      "@id": "metal:status",
+      "@type": "xsd:string"
+    },
+    "next": {
+      "@id": "metal:next",
+      "@type": "xsd:string"
+    },
+    "Equity": "metal:Equity",
+    "Symbol": {
+      "@id": "metal:Symbol",
+      "@type": "xsd:string"
+    },
+    "Name": {
+      "@id": "metal:Name",
+      "@type": "xsd:string"
+    },
+    "Price": {
+      "@id": "metal:Price",
+      "@type": "xsd:decimal"
+    },
+    "Currency": {
+      "@id": "metal:Currency",
+      "@type": "xsd:string"
+    },
+    "Volume": {
+      "@id": "metal:Volume",
+      "@type": "xsd:decimal"
+    },
+    "High": {
+      "@id": "metal:High",
+      "@type": "xsd:decimal"
+    },
+    "Low": {
+      "@id": "metal:Low",
+      "@type": "xsd:decimal"
+    },
+    "Change": {
+      "@id": "metal:Change",
+      "@type": "xsd:decimal"
+    },
+    "ChangePercentage": {
+      "@id": "metal:ChangePercentage",
+      "@type": "xsd:decimal"
+    },
+    "Timestamp": {
+      "@id": "metal:Timestamp",
+      "@type": "xsd:integer"
+    },
+    "ProviderTime": {
+      "@id": "metal:ProviderTime",
+      "@type": "xsd:string"
+    },
+    "Exchange": {
+      "@id": "metal:Exchange",
+      "@type": "xsd:string"
+    },
+    "Category": {
+      "@id": "metal:Category",
+      "@type": "xsd:string"
+    },
+    "TVExchange": {
+      "@id": "metal:TVExchange",
+      "@type": "xsd:string"
+    },
+    "TVSymbol": {
+      "@id": "metal:TVSymbol",
+      "@type": "xsd:string"
+    },
+    "Error": "metal:Error",
+    "error": {
+      "@id": "metal:error",
+      "@type": "xsd:string"
+    },
+    "errors": {
+      "@id": "metal:errors"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Metal Sentinel API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Metal Sentinel's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-24) from openapi/_original/metal-sentinel-api-openapi.json.",
+  "dcterms:created": "2026-10-24",
+  "dcterms:source": [
+    "openapi/_original/metal-sentinel-api-openapi.json"
+  ]
+}

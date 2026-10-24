@@ -1,0 +1,15 @@
+generated: '2026-10-24'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: metal-sentinel.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan 16 23:34:20 2027 GMT
+  hsts: false
+domains:
+- domain: metal-sentinel.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false

@@ -1,0 +1,74 @@
+generated: '2026-10-24'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_original/metal-sentinel-api-openapi.json
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: No MCP server was found. The pre-flight posted tools/list to /mcp on api.metal-sentinel.com, metal-sentinel.com; verdict absent. Candidate
+  tools below are derived from the 12 operation(s) in the provider's own OpenAPI (12 listed); they describe what a server WOULD expose, not one
+  that exists.
+tools:
+- name: get_metal_quote
+  operationId: getMetalQuote
+  method: GET
+  path: /api/metal-quote
+  description: Current spot price for one metal in one currency
+- name: get_gold_price
+  operationId: getGoldPrice
+  method: GET
+  path: /api/gold-price
+  description: Gold spot price with 24k, 18k, 14k and 9k karat prices
+- name: get_silver_price
+  operationId: getSilverPrice
+  method: GET
+  path: /api/silver-price
+  description: Silver spot price with 999, 958, 925, 900 and 800 fineness prices
+- name: get_metal_history
+  operationId: getMetalHistory
+  method: GET
+  path: /api/metal-history
+  description: Daily historical prices between two timestamps
+- name: get_historical_points
+  operationId: getHistoricalPoints
+  method: GET
+  path: /api/historical-points
+  description: Snapshots now and 30 days, 60 days, 1 year and 5 years before a timestamp
+- name: get_crypto_quote
+  operationId: getCryptoQuote
+  method: GET
+  path: /api/crypto-quote
+  description: Live cryptocurrency quote with 24 hour comparison
+- name: get_forex_quote
+  operationId: getForexQuote
+  method: GET
+  path: /api/forex-quote
+  description: Foreign exchange rate against USD
+- name: get_stocks
+  operationId: getStocks
+  method: GET
+  path: /api/get-stock
+  description: Live mining and commodity equities
+- name: get_market_status
+  operationId: getMarketStatus
+  method: GET
+  path: /api/market-status
+  description: Whether the metals market is open and when it next changes
+- name: get_allowed_metals
+  operationId: getAllowedMetals
+  method: GET
+  path: /api/allowed-metals
+  description: Supported metal symbols
+- name: get_allowed_currencies
+  operationId: getAllowedCurrencies
+  method: GET
+  path: /api/allowed-currencies
+  description: Supported fiat currency codes
+- name: get_allowed_cryptos
+  operationId: getAllowedCryptos
+  method: GET
+  path: /api/allowed-cryptos
+  description: Supported cryptocurrency symbols

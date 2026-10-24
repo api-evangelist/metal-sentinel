@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/metal-sentinel/main/json-schema/metal-sentinel-error-schema.json",
+  "title": "Error",
+  "description": "Returned with HTTP 200 when validation fails or the upstream feed reports an error.",
+  "x-generated": "2026-10-24",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_original/metal-sentinel-api-openapi.json#/components/schemas/Error",
+  "type": "object",
+  "properties": {
+    "error": {
+      "type": "string"
+    },
+    "errors": {
+      "type": "object",
+      "description": "Validation messages keyed by field, present only for validation failures.",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "required": [
+    "error"
+  ]
+}

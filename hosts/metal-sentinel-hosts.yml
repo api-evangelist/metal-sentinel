@@ -1,0 +1,52 @@
+generated: '2026-10-24'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 3
+  own: 2
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.metal-sentinel.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: metal-sentinel.com
+  role: api
+  relation: own
+- host: metal-sentinel.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - PrivacyPolicy
+  - Website
+  - Documentation
+  - TermsOfService
+  - Pricing
+  - Blog
+  - Contact
+  serves:
+  - docs
+  platform: rapidapi.com
+  registrable_domain: metal-sentinel.com
+  role: website
+  relation: own
+- host: metal-sentinel.p.rapidapi.com
+  found_by:
+  - apis[]
+  types: []
+  serves:
+  - api
+  registrable_domain: rapidapi.com
+  role: other
+  relation: platform

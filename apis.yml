@@ -1,25 +1,96 @@
 aid: metal-sentinel
 name: Metal Sentinel
-description: 'Metal Sentinel is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://metal-sentinel.com/imgs/og-image.jpg
+description: Metal Sentinel provides a fast REST API delivering free real-time and historical precious metal prices, including gold, silver, platinum,
+  palladium, rhodium, copper, nickel, aluminum, lead and zinc across 180+ currencies, plus crypto, forex and mining stock quotes. The service
+  offers tiered plans via RapidAPI and includes market news.
 url: https://raw.githubusercontent.com/api-evangelist/metal-sentinel/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-24 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-24'
 modified: '2026-10-24'
 tags:
 - Company
-apis: []
+- Financial Data
+- Metals
+- API
+- Real-time
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Spectral
+  url: rules/metal-sentinel-rules.yml
+- type: JSONLD
+  url: json-ld/metal-sentinel-context.jsonld
+- type: Vocabulary
+  url: vocabulary/metal-sentinel-vocabulary.yml
+- type: Conformance
+  url: conformance/metal-sentinel-conformance.yml
+- type: Plans
+  url: plans/metal-sentinel-plans-pricing.yml
+- type: DataModel
+  url: data-model/metal-sentinel-data-model.yml
+- type: LLMsTxt
+  url: llms/metal-sentinel-llms.txt
+- type: WellKnown
+  url: well-known/metal-sentinel-well-known.yml
+- type: Hosts
+  url: hosts/metal-sentinel-hosts.yml
+- type: PrivacyPolicy
+  url: https://metal-sentinel.com/privacy-policy
+- type: DomainSecurity
+  url: security/metal-sentinel-domain-security.yml
 - type: Website
   url: https://metal-sentinel.com
+- type: Documentation
+  url: https://metal-sentinel.com/endpoints
+- type: TermsOfService
+  url: https://metal-sentinel.com/terms
+- type: Pricing
+  url: https://metal-sentinel.com/pricing
+- type: Blog
+  url: https://metal-sentinel.com/blog
+- type: Contact
+  url: https://metal-sentinel.com/contact
+apis:
+- name: Metal Sentinel API
+  description: Real-time and historical precious metal prices, crypto, forex and mining stock data.
+  humanURL: https://metal-sentinel.com/endpoints
+  baseURL: https://metal-sentinel.p.rapidapi.com
+  aid: metal-sentinel:metal-sentinel-api
+- aid: metal-sentinel:metal-sentinel-api-api
+  name: Metal Sentinel API API
+  description: 'Live spot quotes for ten metals refreshed every 15 seconds, daily historical series, gold karat and silver fineness prices, crypto
+
+    and forex quotes, market status and mining equities. Subscribe on RapidAPI to get an API key; the free plan includes 7,500 requests per month.'
+  humanURL: https://metal-sentinel.com/openapi.json
+  baseURL: https://metal-sentinel.p.rapidapi.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_original/metal-sentinel-api-openapi.json
+  - type: JSONSchema
+    url: json-schema/metal-sentinel-silver-quote-response-schema.json
+  - type: JSONSchema
+    url: json-schema/metal-sentinel-gold-quote-response-schema.json
+  - type: JSONSchema
+    url: json-schema/metal-sentinel-forex-quote-response-schema.json
+  - type: JSONSchema
+    url: json-schema/metal-sentinel-equity-schema.json
+  - type: JSONSchema
+    url: json-schema/metal-sentinel-historical-points-response-schema.json
+  - type: JSONSchema
+    url: json-schema/metal-sentinel-error-schema.json
 x-submission-notes: OpenAPI 3.1, 12 ops; metal spot + historical prices; docs /endpoints
 x-submitted-by: info@metal-sentinel.com (apis.io/add, 2026-10-24)
+x-enrichment:
+  date: '2026-10-24'
+  status: enriched
+  artifacts_added: 25
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

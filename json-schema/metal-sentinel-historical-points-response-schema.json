@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/metal-sentinel/main/json-schema/metal-sentinel-historical-points-response-schema.json",
+  "title": "HistoricalPointsResponse",
+  "x-generated": "2026-10-24",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_original/metal-sentinel-api-openapi.json#/components/schemas/HistoricalPointsResponse",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "type": "integer"
+    },
+    "currency": {
+      "type": "string"
+    },
+    "symbol": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "integer",
+      "format": "int64"
+    },
+    "now": {
+      "$ref": "#/$defs/QuoteResult"
+    },
+    "thirtyDay": {
+      "$ref": "#/$defs/QuoteResult"
+    },
+    "sixtyDay": {
+      "$ref": "#/$defs/QuoteResult"
+    },
+    "oneYear": {
+      "$ref": "#/$defs/QuoteResult"
+    },
+    "fiveYear": {
+      "$ref": "#/$defs/QuoteResult"
+    }
+  },
+  "$defs": {
+    "QuoteResult": {
+      "type": "object",
+      "description": "One price point. Prices are per unit in the requested currency.",
+      "properties": {
+        "symbol": {
+          "type": "string"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "ask": {
+          "type": "number"
+        },
+        "mid": {
+          "type": "number"
+        },
+        "bid": {
+          "type": "number"
+        },
+        "high": {
+          "type": "number",
+          "description": "Day high."
+        },
+        "low": {
+          "type": "number",
+          "description": "Day low."
+        },
+        "open": {
+          "type": "number"
+        },
+        "close": {
+          "type": "number",
+          "description": "Previous close."
+        },
+        "timestamp": {
+          "type": "integer",
+          "format": "int64",
+          "description": "Unix timestamp (seconds) of the quote."
+        },
+        "change": {
+          "type": "number",
+          "description": "Change versus previous close."
+        },
+        "changePercentage": {
+          "type": "number"
+        },
+        "unit": {
+          "type": "string",
+          "description": "Pricing unit, for example OUNCE (troy ounce)."
+        },
+        "originalTime": {
+          "type": "string",
+          "description": "Quote time as reported by the source."
+        },
+        "extra": {
+          "description": "Source-specific extra data, usually null."
+        }
+      }
+    }
+  }
+}

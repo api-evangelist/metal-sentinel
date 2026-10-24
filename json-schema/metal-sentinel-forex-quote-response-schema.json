@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/metal-sentinel/main/json-schema/metal-sentinel-forex-quote-response-schema.json",
+  "title": "ForexQuoteResponse",
+  "x-generated": "2026-10-24",
+  "x-method": "derived",
+  "x-generator": "derive-json-schema.py",
+  "x-source": "openapi/_original/metal-sentinel-api-openapi.json#/components/schemas/ForexQuoteResponse",
+  "type": "object",
+  "properties": {
+    "ID": {
+      "type": "integer"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ask": {
+            "type": "number"
+          },
+          "mid": {
+            "type": "number"
+          },
+          "bid": {
+            "type": "number"
+          },
+          "time": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "change": {
+            "type": "number"
+          },
+          "changePercentage": {
+            "type": "number"
+          },
+          "ctousd": {
+            "type": "number",
+            "description": "Units of USD per one unit of the symbol currency."
+          },
+          "usdtoc": {
+            "type": "number",
+            "description": "Units of the symbol currency per one USD."
+          },
+          "nytime": {
+            "type": "string",
+            "description": "Quote time in New York local time."
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "results"
+  ]
+}
