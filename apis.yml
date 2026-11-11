@@ -87,7 +87,6 @@ apis:
   - type: JSONSchema
     url: json-schema/metal-sentinel-error-schema.json
 x-submission-notes: OpenAPI 3.1, 12 ops; metal spot + historical prices; docs /endpoints
-x-submitted-by: info@metal-sentinel.com (apis.io/add, 2026-10-24)
 x-enrichment:
   date: '2026-10-24'
   status: enriched
